@@ -1,0 +1,13 @@
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# Claude API Key
+CLAUDE_API_KEY=your_claude_api_key_here
+
+# Database Configuration (for future implementation)
+# DB_HOST=localhost
+# DB_PORT=5432
+# DB_NAME=deep_intent_db
+# DB_USER=postgres
+# DB_PASSWORD=password
