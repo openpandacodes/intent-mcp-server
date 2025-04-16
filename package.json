@@ -1,25 +1,41 @@
 {
-  "name": "deep-intent-mcp-server",
-  "version": "1.0.0",
-  "description": "Model Context Protocol server for processing travel intents based on Deep Intent Architecture",
-  "main": "dist/server.js",
+  "name": "@openpandacodes/intent-mcp-server",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for processing and managing intents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn src/server.ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run test && npm run build",
+    "prepare": "npm run build"
   },
   "keywords": [
-    "deep-intent",
+    "intent",
     "mcp",
     "nlp",
-    "llm",
-    "travel",
-    "workflow"
+    "model-context-protocol",
+    "intent-processing",
+    "typescript"
   ],
-  "author": "",
+  "author": "OpenPandaCodes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openpandacodes/intent-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openpandacodes/intent-mcp-server/issues"
+  },
+  "homepage": "https://github.com/openpandacodes/intent-mcp-server#readme",
   "license": "MIT",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.18.0",
@@ -41,5 +57,8 @@
     "ts-jest": "^29.3.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
