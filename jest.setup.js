@@ -1,0 +1,1 @@
+process.env.CLAUDE_API_KEY = 'test-api-key'; 

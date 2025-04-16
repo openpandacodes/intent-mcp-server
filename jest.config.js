@@ -9,7 +9,9 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'js', 'json', 'node'],
   moduleNameMapper: {
-    '^@modelcontextprotocol/sdk$': '<rootDir>/src/__mocks__/@modelcontextprotocol/sdk.ts'
+    '^@modelcontextprotocol/sdk$': '<rootDir>/src/__mocks__/@modelcontextprotocol/sdk.ts',
+    '^@anthropic-ai/sdk$': '<rootDir>/src/__mocks__/@anthropic-ai/sdk.ts'
   },
-  moduleDirectories: ['node_modules', 'src']
+  moduleDirectories: ['node_modules', 'src'],
+  setupFiles: ['<rootDir>/jest.setup.js']
 }; 
